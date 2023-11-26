@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lobster+Two:wght@700&family=Montserrat:wght@800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  *{
+    scroll-behavior: smooth
+  }
+  .stroke{
+    -webkit-text-stroke: 2px #003F8C;
+  }
+}
+
+@layer components {
+  .column {
+    @apply flex flex-col;
+  }
+  .column-center {
+    @apply flex flex-col items-center;
+  }
+  .header-img {
+    @apply w-2/5;
+  }
+  .layout {
+    @apply max-w-2xl w-full lg:w-max column gap-14 py-10 px-6;
+  }
+  .img-container {
+    @apply  rounded-xl h-36 w-full relative;
+  }
+  .img-hero {
+    @apply w-full h-full absolute bottom-2 left-2;
+  }
+  /* card */
+  .card-96 {
+    @apply rounded-3xl relative overflow-hidden flex items-center justify-center w-64 h-96 transition-all duration-700;
+  }
+  .card-96-img {
+    @apply h-full w-full object-cover;
+  }
+  .card-title {
+    @apply text-white text-xl font-bold font-montserrat;
+  }
+  .card-desc {
+    @apply text-white text-base font-medium;
+  }
+  .card-shade {
+    @apply bg-slate-500/10 absolute inset-0 p-5 flex items-end;
+  }
+  .button-card {
+    @apply bg-white mt-3 p-3 rounded-lg w-max font-semibold text-xs font-inter;
+  }
+  .menu-btn {
+    @apply  font-inter rounded-full bg-slate-100 px-3 py-2 font-semibold text-xl;
+  }
+
+  .menu-show {
+    @apply menu-btn flex items-center justify-center gap-2 w-1/2 bg-red-maroon;
+  }
+  .menu-hide {
+    @apply menu-btn flex items-center  justify-center gap-2 bg-gray-300 w-1/2;
+  }
+  .text-muted {
+    @apply text-white/60 font-semibold text-sm;
+  }
+  .monserrat-white {
+    @apply text-white font-montserrat text-3xl w-5/6
+  }
+  .hero-menu-btn {
+    @apply bg-red-maroon rounded-lg px-3 py-2 scroll-smooth
+  }
+  .text-btn {
+    @apply font-montserrat text-white font-extrabold text-xl
+  }
+  .btn-container {
+    @apply flex items-center gap-1 p-1 rounded-full bg-gray-100 w-full
+  }
+}
